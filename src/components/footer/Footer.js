@@ -33,24 +33,20 @@ export const Footer = (props) => {
         </div>
         <div className="belloteroSocial">
           <h4>Social</h4>
-          <AnchorBellotero link={"https://www.facebook.com/cssdevconf/"}>
+          <AnchorBellotero link={"https://www.facebook.com/Holacode1/"}>
             Facebook
           </AnchorBellotero>
-          <AnchorBellotero link={"https://twitter.com/CSSDevConf"}>
+          <AnchorBellotero link={"https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"}>
             Twitter
           </AnchorBellotero>
-          <AnchorBellotero link={"https://www.linkedin.com/company/cssconf-eu/"}>
+          <AnchorBellotero link={"https://www.linkedin.com/mynetwork/"}>
             Linkedin
-          </AnchorBellotero>
-          <AnchorBellotero link={"https://www.instagram.com/cssdevconf/"}>
-            Instagram
           </AnchorBellotero>
         </div>
         <div className="belloteroSupport ">
           <h4>Support</h4>
           <ul>
-            <li><a href="mailto:support@bellotero.com">support@bellotero.com</a></li>
-            <li>(555) 555-5555</li>
+            <li>(847)000-010</li>
             <li>Chat now</li>
             <li><a><img src={appStore}></img></a></li>
             <li><a><img src={googlePlay}></img></a></li>
