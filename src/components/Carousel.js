@@ -42,9 +42,9 @@ export class Carousel extends React.PureComponent {
 
             </div>
             <div className="col-xs-12 col-sm-6 carousel-right">
-              <h4>Molly O’Keefe</h4>
+              <h4>Marcela Torres </h4>
               <br></br>
-              <h4 className="text-muted">American Author</h4>
+              <h4 className="text-muted">Hola-code CEO</h4>
             </div>
           </div>
           <div className="d-flex justify-content-center align-items-center flex-wrap" style={{ ...styles }}>
@@ -60,9 +60,9 @@ export class Carousel extends React.PureComponent {
                 </p>
             </div>
             <div className="col-xs-12 col-sm-6 carousel-right">
-              <h4>Rubi Vega</h4>
+              <h4>John Tejeda</h4>
               <br></br>
-              <h4 className="text-muted">Mexican Author</h4>
+              <h4 className="text-muted">Hola-code Grad</h4>
             </div>
           </div>
         </React_Bootstrap_Carousel>
