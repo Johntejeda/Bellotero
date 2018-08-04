@@ -1,0 +1,577 @@
+/* =============================================================================
+   TABLE OF CONTENTS
+     Color Variables
+     Breakpoints
+     Mixins
+     Animations
+     Buttons
+     General Selectors
+     <Intro/>
+     <Clients/>
+     <About/>
+     <Bookkeeping/>
+     <Carousel/>
+     <Calculator/>
+     <RequestDemo/>
+     <Footer/>
+     Media Queries
+
+   ========================================================================== */
+
+
+
+/* =============================================================================
+  Color Variables
+  ========================================================================== */
+
+$dark: #272a43;
+$bluegreen: #00856c;
+$sunflower-yellow: #ffd400;
+$watermelon: #ff415e;
+$green-blue: #00b896;
+$teal: #009e81;
+$sandy-yellow: #ffea7f;
+$faded-red: #cc354b;
+$black: #000000;
+$orange-yellow: #ffac00;
+$lipstick: #e63b55;
+$black-two: #333333;
+$brownish-grey: #666666;
+$warm-grey: #7f7f7f;
+$pinkish-grey: #bfbfbf;
+$white: #d9d9d9;
+$white-two: #e5e5e5;
+$white-three: #f2f2f2;
+$white-four: #ffffff;
+$white-four-30: rgba(255, 255, 255, 0.3);
+$white-four-75: rgba(255, 255, 255, 0.75);
+$white-four-50: rgba(255, 255, 255, 0.5);
+$white-four-60: rgba(255, 255, 255, 0.6);
+$white-four-25: rgba(255, 255, 255, 0.25);
+$pale-grey: #f8f8fa;
+$pale-grey-two: #fafafc;
+$pale-grey-three: #fcfcfd;
+$dark-bg-color: #35374c;
+
+/* =============================================================================
+  Breakpoints
+  ========================================================================== */
+$break-small: 380px;
+$break-medium: 970px;
+$break-large: 1024px;
+
+/* =============================================================================
+  Mixins
+  ========================================================================== */
+@mixin imgCover($img) {
+  background-image: url($img);
+  background-size: cover;
+}
+
+/* =============================================================================
+  Animations
+  ========================================================================== */
+
+  @keyframes a {
+    0% {
+      -webkit-transform: translateX(500px);
+      transform: translateX(500px);
+      opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+
+/* =============================================================================
+  Buttons
+  ========================================================================== */
+
+.btn__demo {
+  margin-right: 1em;
+}
+
+.btn {
+  height: 34px;
+  border-radius: 2px;
+}
+
+.btn-primary {
+  width: 120px;
+  background-color: $green-blue;
+  border: solid 1px $teal;
+  &:hover {
+    background-color: $bluegreen;
+    border: solid 1px $teal;
+  }
+}
+
+.btn-outline-secondary {
+  width: 80px;
+  color: $white-four;
+  border: solid 1px $white-four-50;
+}
+
+.button__requestDemo {
+  width: 127px;
+  height: 42px;
+}
+
+.input__mail {
+  border: transparent;
+  padding: 14px 16px;
+}
+
+/* =============================================================================
+  General Selectors
+  ========================================================================== */
+html {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white-four;
+}
+
+form {
+  margin-top: 4em;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: $white-two;
+  }
+}
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 24px;
+  color: $black;
+  font-weight: 500;
+}
+small {
+  font-family: 'Roboto', serif;
+  font-weight: lighter;
+}
+img {
+  width: 100%;
+  animation: a 1.5s ease-in-out;
+}
+header {
+  font-size: 14px;
+  background-color: $dark-bg-color;
+  color: $white-four-60;
+  padding: 1.2rem 2.2rem;
+}
+section {
+  a {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    color: $green-blue;
+  }
+
+  &.calculator,
+  &.requestDemo {
+    margin-top: 100px;
+  }
+}
+article {
+  margin-bottom: 5em;
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+}
+
+input {
+  color: $white;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $white-four-30;
+      opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $white-four-30;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: $white-four-30;
+  }
+
+  &[type=range] {
+    width: 100%;
+    height: 3px;
+    background: $pinkish-grey;
+    &:focus {
+      outline: none;
+    }
+    &::-moz-range-thumb {
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: $green-blue;
+    }
+    &::-webkit-range-thumb {
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: $green-blue;
+    }
+    &::-webkit-slider-thumb {
+        -webkit-appearance: sliderthumb-horizontal;
+        box-sizing: border-box;
+        display: block;
+        background: $green-blue;
+    }
+  }
+}
+
+ion-icon {
+    top: 3px;
+    position: relative;
+    left: 2px;
+    object-fit: contain;
+    font-size: 18px;
+}
+
+
+/* =============================================================================
+  <Intro/>
+  ========================================================================== */
+  .section__intro {
+    height: 100vh;
+    background-color: $dark-bg-color;
+}
+.section__intro__left {
+    padding-left: 160px;
+}
+.section__intro__title {
+    color: $white-four;
+    font-size: 40px;
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-align: left;
+    strong {
+      font-weight: 500;
+    }
+}
+
+/* =============================================================================
+  <Clients/>
+  ========================================================================== */
+.clients {
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafc;
+  box-shadow: inset 0 1px 0 0 #e5e5e5, inset 0 -1px 0 0 #e5e5e5;
+
+  img {
+    max-width: 141px;
+    max-height: 80px;
+  }
+}
+
+/* =============================================================================
+  <About/>
+  ========================================================================== */
+.about {
+  margin-top: 8em;
+  .about__weAre {
+    color: $black-two;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 9.3em;
+  }
+  h2 {
+    line-height: 1.5;
+    font-size: 24px;
+    color: #404040;
+    font-weight: 300;
+    padding-bottom: 20px;
+  }
+}
+
+/* =============================================================================
+  <Bookkeeping/>
+  ========================================================================== */
+
+.bookkeeping {
+  height: 400px;
+  h1 {
+    color: $white-four;
+    line-height: 1;
+  }
+  p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: $white-two;
+  }
+  small {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 1.22;
+    padding-left: 5px;
+  }
+  &:hover {
+    opacity: .7;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    transition: transform .5s, color .9s, opacity .9s ease;
+  }
+
+}
+.bookkeeping__1 {
+  @include imgCover('../img/photo-1@3x 2.jpg');
+}
+.bookkeeping__2 {
+  @include imgCover('../img/photo-2@3x.jpg');
+}
+.bookkeeping__3 {
+  @include imgCover('../img/photo-1@3x.jpg');
+}
+
+/* =============================================================================
+  <Carousel/>
+  ========================================================================== */
+
+.section__carousel {
+  background-color: #fafafc;
+  h3 {
+    margin-bottom: 61px;
+  }
+  strong {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .carousel-left {
+    padding-left: 12em;
+  }
+  .carousel-right {
+    padding-left: 10em;
+    padding-top: 2em;
+  }
+  .quote {
+    max-width: 45.8px;
+  }
+}
+
+/* =============================================================================
+  <Calculator/>
+  ========================================================================== */
+.calculator {
+  line-height: 1.5;
+  .calculator__title {
+    width: 299px;
+    height: 72px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+  }
+  .calculator__value {
+    font-size: 24px;
+    color: $black;
+    margin-top: 10px;
+    border: solid 1px $pinkish-grey;
+    padding: 15px;
+  }
+  .calculator__result {
+    font-family: 'Roboto Slab', serif;
+    font-size: 5.34rem;
+    font-weight: 300;
+    line-height: 1;
+    color: $green-blue;
+    margin-top: 30px;
+    small {
+      font-size: 36px;
+      font-weight: 100;
+      padding-right: 5px;
+      line-height: 1.22;
+      color: #00b896;
+    }
+  }
+  h2,
+  .calculator__result {
+    text-align: right;
+  }
+  p {
+    max-width: 465px;
+    color: #404040;
+  }
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #000019;
+  }
+}
+
+.form-inline {
+  input {
+    width: 275px;
+    height: 42px;
+    border-radius: 2px;
+    background-color: #1d1f35;
+  }
+}
+
+/* =============================================================================
+  <RequestDemo/>
+  ========================================================================== */
+
+  .requestDemo {
+    height: 400px;
+    line-height: 1.5;
+    background-color: $green-blue;
+    box-shadow: inset 0 1px 0 0 #1874c0;
+    padding: 5em 0;
+    h1 {
+      width: 384px;
+      height: 120px;
+      font-size: 40px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      color: $white-four;
+      line-height: 1.5;
+    }
+    p {
+      width: 358px;
+      font-weight: 200;
+      height: 72px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+    input {
+      background-color: rgba(0, 93, 76, 0.39);
+      border: solid 1px #005d4c;
+    }
+    button {
+      background-color: $bluegreen;
+      border: solid 1px #005d4b;
+    }
+  }
+
+/* =============================================================================
+  <Footer/>
+  ========================================================================== */
+
+  footer {
+    font-size: 14px;
+    background-color: $dark-bg-color;
+    color: $white-four-60;
+    padding-top: 80px;
+    h4 {
+      color: $white-four;
+    }
+    li {
+      padding: 1.2em 0;
+    }
+    img {
+      max-width: 134px;
+    }
+    small {
+      padding-right: 4.2em;
+    }
+    .copyAndTerms {
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.25);
+      small {
+        font-size: 12px;
+      }
+    }
+    .copy {
+       color: $pinkish-grey;
+    }
+    .policyAndTerms {
+      color: $white-three;
+    }
+  }
+
+/* =============================================================================
+  Media Queries
+  ========================================================================== */
+@media only screen and (max-width: $break-medium) {
+
+  input[type="text"],
+  button {
+    width: 100% !important;
+    margin-top: 0.5em;
+  }
+  .section__intro__left {
+    padding-left: 2em;
+  }
+  .about {
+    .about__weAre {
+      margin-bottom: auto;
+    }
+  }
+  .section__carousel {
+    .carousel-left {
+      padding: 1em;
+    }
+    .carousel-right {
+      padding: 2em;
+    }
+  }
+  .requestDemo {
+    height: auto;
+    p {
+      width: auto;
+    }
+    h1,
+    p {
+      height: auto;
+    }
+  }
+}
+
+
+@media only screen and (max-width: $break-small) {
+  .calculator {
+    padding: 0 2em;
+  }
+  form {
+    padding: 0 2rem;
+  }
+  footer {
+    .copyAndTerms {
+      padding: 10px;
+      height: auto;
+    }
+    small {
+      padding-right: 1.5em;
+    }
+  }
+
+}

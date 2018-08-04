@@ -1,0 +1,440 @@
+/* =============================================================================
+   TABLE OF CONTENTS
+     Color Variables
+     Breakpoints
+     Mixins
+     Animations
+     Buttons
+     General Selectors
+     <Intro/>
+     <Clients/>
+     <About/>
+     <Bookkeeping/>
+     <Carousel/>
+     <Calculator/>
+     <RequestDemo/>
+     <Footer/>
+     Media Queries
+
+   ========================================================================== */
+/* =============================================================================
+  Color Variables
+  ========================================================================== */
+/* =============================================================================
+  Breakpoints
+  ========================================================================== */
+/* =============================================================================
+  Mixins
+  ========================================================================== */
+/* =============================================================================
+  Animations
+  ========================================================================== */
+@keyframes a {
+  0% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+/* =============================================================================
+  Buttons
+  ========================================================================== */
+.btn__demo {
+  margin-right: 1em; }
+
+.btn {
+  height: 34px;
+  border-radius: 2px; }
+
+.btn-primary {
+  width: 120px;
+  background-color: #00b896;
+  border: solid 1px #009e81; }
+  .btn-primary:hover {
+    background-color: #00856c;
+    border: solid 1px #009e81; }
+
+.btn-outline-secondary {
+  width: 80px;
+  color: #ffffff;
+  border: solid 1px rgba(255, 255, 255, 0.5); }
+
+.button__requestDemo {
+  width: 127px;
+  height: 42px; }
+
+.input__mail {
+  border: transparent;
+  padding: 14px 16px; }
+
+/* =============================================================================
+  General Selectors
+  ========================================================================== */
+html {
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+form {
+  margin-top: 4em; }
+
+a {
+  color: inherit; }
+  a:hover {
+    color: #e5e5e5; }
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75; }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1 {
+  font-size: 3.5rem; }
+
+h3 {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 500; }
+
+small {
+  font-family: 'Roboto', serif;
+  font-weight: lighter; }
+
+img {
+  width: 100%;
+  animation: a 1.5s ease-in-out; }
+
+header {
+  font-size: 14px;
+  background-color: #35374c;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 1.2rem 2.2rem; }
+
+section a {
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #00b896; }
+section.calculator, section.requestDemo {
+  margin-top: 100px; }
+
+article {
+  margin-bottom: 5em; }
+  article p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.75; }
+
+input {
+  color: #d9d9d9; }
+  input ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    /* Firefox */ }
+  input :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.3); }
+  input ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.3); }
+  input[type=range] {
+    width: 100%;
+    height: 3px;
+    background: #bfbfbf; }
+    input[type=range]:focus {
+      outline: none; }
+    input[type=range]::-moz-range-thumb {
+      border: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #00b896; }
+    input[type=range]::-webkit-range-thumb {
+      border: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: #00b896; }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: sliderthumb-horizontal;
+      box-sizing: border-box;
+      display: block;
+      background: #00b896; }
+
+ion-icon {
+  top: 3px;
+  position: relative;
+  left: 2px;
+  object-fit: contain;
+  font-size: 18px; }
+
+/* =============================================================================
+  <Intro/>
+  ========================================================================== */
+.section__intro {
+  height: 100vh;
+  background-color: #35374c; }
+
+.section__intro__left {
+  padding-left: 160px; }
+
+.section__intro__title {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 200;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  text-align: left; }
+  .section__intro__title strong {
+    font-weight: 500; }
+
+/* =============================================================================
+  <Clients/>
+  ========================================================================== */
+.clients {
+  width: 100%;
+  padding: 10px;
+  background-color: #fafafc;
+  box-shadow: inset 0 1px 0 0 #e5e5e5, inset 0 -1px 0 0 #e5e5e5; }
+  .clients img {
+    max-width: 141px;
+    max-height: 80px; }
+
+/* =============================================================================
+  <About/>
+  ========================================================================== */
+.about {
+  margin-top: 8em; }
+  .about .about__weAre {
+    color: #333333;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 9.3em; }
+  .about h2 {
+    line-height: 1.5;
+    font-size: 24px;
+    color: #404040;
+    font-weight: 300;
+    padding-bottom: 20px; }
+
+/* =============================================================================
+  <Bookkeeping/>
+  ========================================================================== */
+.bookkeeping {
+  height: 400px; }
+  .bookkeeping h1 {
+    color: #ffffff;
+    line-height: 1; }
+  .bookkeeping p {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #e5e5e5; }
+  .bookkeeping small {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 1.22;
+    padding-left: 5px; }
+  .bookkeeping:hover {
+    opacity: .7;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    transition: transform .5s, color .9s, opacity .9s ease; }
+
+.bookkeeping__1 {
+  background-image: url("../img/photo-1@3x 2.jpg");
+  background-size: cover; }
+
+.bookkeeping__2 {
+  background-image: url("../img/photo-2@3x.jpg");
+  background-size: cover; }
+
+.bookkeeping__3 {
+  background-image: url("../img/photo-1@3x.jpg");
+  background-size: cover; }
+
+/* =============================================================================
+  <Carousel/>
+  ========================================================================== */
+.section__carousel {
+  background-color: #fafafc; }
+  .section__carousel h3 {
+    margin-bottom: 61px; }
+  .section__carousel strong {
+    font-size: 24px;
+    font-weight: 300; }
+  .section__carousel .carousel-left {
+    padding-left: 12em; }
+  .section__carousel .carousel-right {
+    padding-left: 10em;
+    padding-top: 2em; }
+  .section__carousel .quote {
+    max-width: 45.8px; }
+
+/* =============================================================================
+  <Calculator/>
+  ========================================================================== */
+.calculator {
+  line-height: 1.5; }
+  .calculator .calculator__title {
+    width: 299px;
+    height: 72px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left; }
+  .calculator .calculator__value {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 10px;
+    border: solid 1px #bfbfbf;
+    padding: 15px; }
+  .calculator .calculator__result {
+    font-family: 'Roboto Slab', serif;
+    font-size: 5.34rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #00b896;
+    margin-top: 30px; }
+    .calculator .calculator__result small {
+      font-size: 36px;
+      font-weight: 100;
+      padding-right: 5px;
+      line-height: 1.22;
+      color: #00b896; }
+  .calculator h2,
+  .calculator .calculator__result {
+    text-align: right; }
+  .calculator p {
+    max-width: 465px;
+    color: #404040; }
+  .calculator label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    color: #000019; }
+
+.form-inline input {
+  width: 275px;
+  height: 42px;
+  border-radius: 2px;
+  background-color: #1d1f35; }
+
+/* =============================================================================
+  <RequestDemo/>
+  ========================================================================== */
+.requestDemo {
+  height: 400px;
+  line-height: 1.5;
+  background-color: #00b896;
+  box-shadow: inset 0 1px 0 0 #1874c0;
+  padding: 5em 0; }
+  .requestDemo h1 {
+    width: 384px;
+    height: 120px;
+    font-size: 40px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    color: #ffffff;
+    line-height: 1.5; }
+  .requestDemo p {
+    width: 358px;
+    font-weight: 200;
+    height: 72px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.88); }
+  .requestDemo input {
+    background-color: rgba(0, 93, 76, 0.39);
+    border: solid 1px #005d4c; }
+  .requestDemo button {
+    background-color: #00856c;
+    border: solid 1px #005d4b; }
+
+/* =============================================================================
+  <Footer/>
+  ========================================================================== */
+footer {
+  font-size: 14px;
+  background-color: #35374c;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 80px; }
+  footer h4 {
+    color: #ffffff; }
+  footer li {
+    padding: 1.2em 0; }
+  footer img {
+    max-width: 134px; }
+  footer small {
+    padding-right: 4.2em; }
+  footer .copyAndTerms {
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.25); }
+    footer .copyAndTerms small {
+      font-size: 12px; }
+  footer .copy {
+    color: #bfbfbf; }
+  footer .policyAndTerms {
+    color: #f2f2f2; }
+
+/* =============================================================================
+  Media Queries
+  ========================================================================== */
+@media only screen and (max-width: 970px) {
+  input[type="text"],
+  button {
+    width: 100% !important;
+    margin-top: 0.5em; }
+
+  .section__intro__left {
+    padding-left: 2em; }
+
+  .about .about__weAre {
+    margin-bottom: auto; }
+
+  .section__carousel .carousel-left {
+    padding: 1em; }
+  .section__carousel .carousel-right {
+    padding: 2em; }
+
+  .requestDemo {
+    height: auto; }
+    .requestDemo p {
+      width: auto; }
+    .requestDemo h1,
+    .requestDemo p {
+      height: auto; } }
+@media only screen and (max-width: 380px) {
+  .calculator {
+    padding: 0 2em; }
+
+  form {
+    padding: 0 2rem; }
+
+  footer .copyAndTerms {
+    padding: 10px;
+    height: auto; }
+  footer small {
+    padding-right: 1.5em; } }
+
+/*# sourceMappingURL=App.css.map */
