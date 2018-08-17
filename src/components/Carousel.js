@@ -52,11 +52,11 @@ export class Carousel extends React.PureComponent {
               <h3>Our customers love us</h3>
               <p>
                 <img  className="quote"src={Quote}></img>
-                 It's funny what memory does, isn't
-                 it? My favorite holiday tradition might not have happened
-                  more than once or twice. But because it is such a good
-                  memory, so encapsulating of everything I love about the
-                  holidays, in my mind it happened every year. Without fail.
+                 One of the the best experiences in my life. I have gone from
+                 just understading what cooding is to and surplus of knowledge.
+                 I am not only greatfull for the learning experience that Holacode
+                 has provided me but the life long friendships that have blossomed
+                 my time here. 
                 </p>
             </div>
             <div className="col-xs-12 col-sm-6 carousel-right">
